@@ -1,7 +1,9 @@
+/* eslint-disable react-refresh/only-export-components */
 import React from "react";
 import { motion } from "framer-motion";
 
-import { AppWrap } from '../../wrapper/AppWrap.js'
+// import { AppWrap } from '../../wrapper/AppWrap.js'
+import { AppWrap } from '../../wrapper/index.js'
 import { images } from "../../constants/index.js";
 import "./Header.scss";
 
@@ -16,7 +18,6 @@ const scaleVariants = {
   },
 };
 
-// eslint-disable-next-line react-refresh/only-export-components
 const Header = () => (
   <div className="app__header app__flex">
     <motion.div
