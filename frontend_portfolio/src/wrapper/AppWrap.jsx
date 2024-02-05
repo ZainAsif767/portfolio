@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavigationDots, SocialMedia } from '../components';
+import { FaCopyright } from 'react-icons/fa';
 
 const AppWrap = (Component, idName, classNames) => function HOC() {
   return (
@@ -9,7 +10,7 @@ const AppWrap = (Component, idName, classNames) => function HOC() {
         <Component />
 
         <div className="copyright">
-          <p className="p-text">@2020 MICHAEL</p>
+          <p className="p-text"><FaCopyright /> 2024 Zain Asif</p>
           <p className="p-text">All rights reserved</p>
 
         </div>

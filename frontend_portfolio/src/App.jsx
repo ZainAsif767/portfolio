@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { About, Footer, Header, Skills, Testimonial, Work } from "./container";
 import { Navbar } from "./components";
 import "./App.scss";
@@ -9,7 +10,7 @@ const App = () => (
     <About />
     <Work />
     <Skills />
-    <Testimonial />
+    {/* <Testimonial /> */}
     <Footer />
   </div>
 );
