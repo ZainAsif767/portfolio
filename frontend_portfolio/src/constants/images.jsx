@@ -41,9 +41,28 @@ import Musab from '../assets/Musab.jpg'
 import filmpire from "../assets/filmpire.jpg"
 import Acadist from "../assets/acadist.jpg"
 import TourOfHeroes from "../assets/TourOfHeroes.jpg"
-
+import OperatingSystem from "../assets/OperatingSystem.jpg"
+import OpenGL from "../assets/openGL.png"
+import priorityQ from "../assets/PriorityQueue.png"
+import cpplogo from "../assets/c-logo.png"
+import nestjs from "../assets/nestjs.png"
+import business from "../assets/business.png"
+import discuss from "../assets/discuss.png"
+import identicon from "../assets/identicon.png"
+import twitter from "../assets/twitter.png"
+import starflix from "../assets/starflix.png"
 
 export default {
+  starflix,
+  twitter,
+  identicon,
+  discuss,
+  business,
+  nestjs,
+  cpplogo,
+  priorityQ,
+  OpenGL,
+  OperatingSystem,
   TourOfHeroes,
   Acadist,
   filmpire,
