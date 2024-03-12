@@ -1,12 +1,13 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-refresh/only-export-components */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { data as cardData } from "./data";
 import "./Work.scss";
-// import { urlFor, client } from "../../client";
+import { urlFor, client } from "../../client";
 
 const cardVariants = {
   hidden: { opacity: 0, scale: 0.75 },
@@ -21,10 +22,10 @@ const cardVariants = {
 
 
 const Work = () => {
-  // const [works, setWorks] = useState([]);
-  // const [filterWork, setFilterWork] = useState([]);
-  // const [activeFilter, setActiveFilter] = useState("All");
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [works, setWorks] = useState(cardData);
+  const [filterWork, setFilterWork] = useState(cardData);
+  const [activeFilter, setActiveFilter] = useState("All");
+  const [filterOptions, setFilterOptions] = useState([]);
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [showItems, setShowItems] = useState(3);
   const initialItemsToShow = 3;
@@ -37,29 +38,26 @@ const Work = () => {
     setShowItems(initialItemsToShow);
   };
 
-  // useEffect(() => {
-  //   const query = '*[_type == "works"]';
+  const handleWorkFilter = (item) => {
+    setActiveFilter(item);
+    setAnimateCard([{ y: 100, opacity: 0 }]);
 
-  //   client.fetch(query).then((data) => {
-  //     setWorks(data);
-  //     setFilterWork(data);
-  //   });
-  // }, []);
+    setTimeout(() => {
+      setAnimateCard([{ y: 0, opacity: 1 }]);
 
-  // const handleWorkFilter = (item) => {
-  //   setActiveFilter(item);
-  //   setAnimateCard([{ y: 100, opacity: 0 }]);
+      if (item === "All") {
+        setFilterWork(works);
+      } else {
+        setFilterWork(works.filter((work) => work.tags.includes(item)));
+      }
+    }, 500);
+  };
 
-  //   setTimeout(() => {
-  //     setAnimateCard([{ y: 0, opacity: 1 }]);
-
-  //     if (item === "All") {
-  //       setFilterWork(works);
-  //     } else {
-  //       setFilterWork(works.filter((work) => work.tags.includes(item)));
-  //     }
-  //   }, 500);
-  // };
+  useEffect(() => {
+    const allTags = new Set(works.flatMap(work => work.tags));
+    const tagsArray = ["All", ...allTags];
+    setFilterOptions(tagsArray);
+  }, [works]);
 
   return (
     <>
@@ -67,28 +65,24 @@ const Work = () => {
         My Creative <span>Portfolio</span> Section
       </h2>
 
-      {/* <div className="app__work-filter">
-        {["UI/UX", "Web App", "Mobile App", "React JS", "All"].map(
-          (item, index) => (
-            <div
-              key={index}
-              onClick={() => handleWorkFilter(item)}
-              className={`app__work-filter-item app__flex p-text ${
-                activeFilter === item ? "item-active" : ""
-              }`}
-            >
-              {item}
-            </div>
-          )
-        )}
-      </div> */}
+      <div className="app__work-filter">
+        {filterOptions.map((item, index) => (
+          <div
+            key={index}
+            onClick={() => handleWorkFilter(item)}
+            className={`app__work-filter-item app__flex p-text ${activeFilter === item ? "item-active" : ""}`}
+          >
+            {item}
+          </div>
+        ))}
+      </div>
 
       <motion.div
         animate={animateCard}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__work-portfolio"
       >
-        {cardData.slice(0, showItems).map((work, index) => (
+        {filterWork.slice(0, showItems).map((work, index) => (
           <motion.div
             className="app__work-item app__flex"
             key={index}
@@ -110,14 +104,15 @@ const Work = () => {
                 className="app__work-hover app__flex"
               >
                 <a href={work.projectLink} target="_blank" rel="noreferrer">
-                  <motion.div
-                    whileInView={{ scale: [0, 1] }}
-                    whileHover={{ scale: [1, 0.9] }}
-                    transition={{ duration: 0.25 }}
-                    className="app__flex"
-                  >
-                    <AiFillEye />
-                  </motion.div>
+                  {work.projectLink &&
+                    <motion.div
+                      whileInView={{ scale: [0, 1] }}
+                      whileHover={{ scale: [1, 0.9] }}
+                      transition={{ duration: 0.25 }}
+                      className="app__flex"
+                    >
+                      <AiFillEye />
+                    </motion.div>}
                 </a>
                 <a href={work.codeLink} target="_blank" rel="noreferrer">
                   <motion.div
