@@ -1,25 +1,41 @@
-import React, { useState, useEffect } from "react";
+/* eslint-disable react-refresh/only-export-components */
+import React, { useState } from "react";
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
-// import { urlFor, client } from "../../client";
+import { data as cardData } from "./data";
 import "./Work.scss";
-import { images } from "../../constants";
+// import { urlFor, client } from "../../client";
 
-const works = [
-  { name: "Homes", imgUrl: images.homesP, projectLink: "https://homes-gules.vercel.app/", codeLink: "https://github.com/ZainAsif767/homes", title: "Homes Angular App", description: "App built on AngularIO for practice purpose", tags: ['Angular'] },
-  { name: "Bliss Textile", imgUrl: images.blissTextile, projectLink: "https://bliss-textile.vercel.app/", codeLink: "https://github.com/ZainAsif767/bliss_textile", title: "Bliss Textile Industry", description: "Web made on ReactJS for Bliss Textile", tags: ['React'] },
-  { name: "Musab's Portfolio", imgUrl: images.Musab, projectLink: "https://musab-portfolio.vercel.app/", codeLink: "https://github.com/ZainAsif767/musab_portfolio", title: "Musab's Portfolio", description: "Portfolio Website made using ReactJS + Vite", tags: ['React'] },
-  { name: "Tour of heroes", imgUrl: "", projectLink: "", codeLink: "https://github.com/ZainAsif767/tour-of-heroes", title: "Tour Of Heroes", description: "Angular web tutorial for practice purpose", tags: ['Angular'] },
-  { name: "Filmpire", imgUrl: images.filmpire, projectLink: "https://filmpirex.netlify.app/", codeLink: "https://github.com/ZainAsif767/Filmpire", title: "Filmpire", description: "Movie application made using React, Alan AI, Redux toolkit", tags: ['React'] },
-  { name: "Acadist", imgUrl: images.Acadist, projectLink: "", codeLink: "https://github.com/ZainAsif767/Acadist", title: "Acadist", description: "Acadist is a fullstack LMS app uses Postgres/Express for BE and React for FE", tags: ['React'] }
-]
+const cardVariants = {
+  hidden: { opacity: 0, scale: 0.75 },
+  visible: i => ({
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delay: i * 0.1, // Each card delays a bit longer than the previous one
+    },
+  }),
+};
+
+
 const Work = () => {
   // const [works, setWorks] = useState([]);
   // const [filterWork, setFilterWork] = useState([]);
   // const [activeFilter, setActiveFilter] = useState("All");
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
+  const [showItems, setShowItems] = useState(3);
+  const initialItemsToShow = 3;
+
+  const handleLoadMore = () => {
+    setShowItems(showItems + 3);
+  }
+
+  const handleShowLess = () => {
+    setShowItems(initialItemsToShow);
+  };
 
   // useEffect(() => {
   //   const query = '*[_type == "works"]';
@@ -72,8 +88,15 @@ const Work = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__work-portfolio"
       >
-        {works.map((work, index) => (
-          <div className="app__work-item app__flex" key={index}>
+        {cardData.slice(0, showItems).map((work, index) => (
+          <motion.div
+            className="app__work-item app__flex"
+            key={index}
+            variants={cardVariants}
+            initial="hidden"
+            animate="visible"
+            custom={index}
+          >
             <div className="app__work-img app__flex">
               <img src={work.imgUrl} alt={work.name} />
 
@@ -119,9 +142,21 @@ const Work = () => {
                 <p className="p-text">{work.tags[0]}</p>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </motion.div>
+      <div style={{ display: "flex", justifyContent: "center", gap: "10px", marginTop: "20px" }}>
+        {showItems < cardData.length && (
+          <button onClick={handleLoadMore} className="show-more-btn">
+            Show More...
+          </button>
+        )}
+        {showItems > initialItemsToShow && (
+          <button onClick={handleShowLess} className="show-less-btn">
+            Show Less
+          </button>
+        )}
+      </div>
     </>
   );
 };

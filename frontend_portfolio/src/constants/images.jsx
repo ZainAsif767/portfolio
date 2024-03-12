@@ -40,9 +40,11 @@ import blissTextile from "../assets/blissTextile.png"
 import Musab from '../assets/Musab.jpg'
 import filmpire from "../assets/filmpire.jpg"
 import Acadist from "../assets/acadist.jpg"
+import TourOfHeroes from "../assets/TourOfHeroes.jpg"
 
 
 export default {
+  TourOfHeroes,
   Acadist,
   filmpire,
   Musab,
