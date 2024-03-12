@@ -31,7 +31,7 @@ const Work = () => {
   const initialItemsToShow = 3;
 
   const handleLoadMore = () => {
-    setShowItems(showItems + 3);
+    setShowItems(showItems + 6);
   }
 
   const handleShowLess = () => {
