@@ -122,6 +122,33 @@ export const data = [
         tags: ['Elixir/Phoenix', 'React']
     },
     {
+        name: "Car Hub",
+        imgUrl: images.carhub,
+        projectLink: "https://car-showcase-kohl-six.vercel.app/",
+        codeLink: "https://github.com/ZainAsif767/car_showcase",
+        title: "Car Hub",
+        description: "",
+        tags: ['React']
+    },
+    {
+        name: "TaskMate",
+        imgUrl: images.taskmate,
+        projectLink: "https://za767-taskmate.netlify.app/",
+        codeLink: "https://github.com/ZainAsif767/taskmate",
+        title: "TaskMate",
+        description: "Task managing Application with Awesome BG themes",
+        tags: ['React']
+    },
+    {
+        name: "Carousel & Card",
+        imgUrl: images.carousel,
+        projectLink: "https://carousels-slider.vercel.app/",
+        codeLink: "https://github.com/ZainAsif767/Carousel",
+        title: "Carousel & Card",
+        description: "Carousel slider and a product card design on react",
+        tags: ['React']
+    },
+    {
         name: "Uni Map Project",
         imgUrl: images.cpp,
         codeLink: "https://github.com/ZainAsif767/Cpp-Project-Map",

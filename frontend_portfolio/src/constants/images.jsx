@@ -51,8 +51,14 @@ import discuss from "../assets/discuss.png"
 import identicon from "../assets/identicon.png"
 import twitter from "../assets/twitter.png"
 import starflix from "../assets/starflix.png"
+import carhub from "../assets/carhub.png"
+import carousel from "../assets/carousel.png"
+import taskmate from "../assets/taskmate.png"
 
 export default {
+  taskmate,
+  carousel,
+  carhub,
   starflix,
   twitter,
   identicon,
