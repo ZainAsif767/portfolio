@@ -54,8 +54,10 @@ import starflix from "../assets/starflix.png"
 import carhub from "../assets/carhub.png"
 import carousel from "../assets/carousel.png"
 import taskmate from "../assets/taskmate.png"
+import tenzies from "../assets/tenzies.png"
 
 export default {
+  tenzies,
   taskmate,
   carousel,
   carhub,

@@ -157,6 +157,15 @@ export const data = [
         tags: ['University']
     },
     {
+        name: "Tenzies Game",
+        imgUrl: images.tenzies,
+        projectLink: "https://the-tenzies-game.netlify.app/",
+        codeLink: "https://github.com/ZainAsif767/tenzies-game",
+        title: "Tenzies",
+        description: "Tenzies Game made using React",
+        tags: ['React']
+    },
+    {
         name: "NestJS API",
         imgUrl: images.nestjs,
         codeLink: "https://github.com/ZainAsif767/nestjs-api",
