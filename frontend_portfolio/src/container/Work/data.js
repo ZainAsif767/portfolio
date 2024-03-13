@@ -95,7 +95,6 @@ export const data = [
         description: "A repo for Uni course (CG) which covers Algos for OpenGL Labs",
         tags: ['University']
     },
-
     {
         name: "Data Structures and Algo",
         imgUrl: images.DSA,
