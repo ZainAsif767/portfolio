@@ -55,8 +55,24 @@ import carhub from "../assets/carhub.png"
 import carousel from "../assets/carousel.png"
 import taskmate from "../assets/taskmate.png"
 import tenzies from "../assets/tenzies.png"
+import notesapp from "../assets/notesapp.png"
+import nftpreview from "../assets/nftpreview.png"
+import meme from "../assets/meme.png"
+import cube from "../assets/cube.png"
+import memory from "../assets/memory.png"
+import python1 from "../assets/python1.png"
+import notifications from "../assets/notifications.png"
+import DSA from "../assets/DSA.png"
 
 export default {
+  DSA,
+  notifications,
+  python1,
+  memory,
+  cube,
+  meme,
+  nftpreview,
+  notesapp,
   tenzies,
   taskmate,
   carousel,
