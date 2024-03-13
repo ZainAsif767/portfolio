@@ -96,6 +96,14 @@ export const data = [
         tags: ['University']
     },
     {
+        name: "Data Structures and Algo",
+        imgUrl: images.DSA,
+        codeLink: "https://github.com/ZainAsif767/Computer-Graphics",
+        title: "Data Structures and Algo",
+        description: "Data Structures(Basic) using C++ language",
+        tags: ['University']
+    },
+    {
         name: "Priority Queue Simulator",
         imgUrl: images.priorityQ,
         projectLink: "https://priority-queue-simulator-two.vercel.app/",
@@ -118,7 +126,7 @@ export const data = [
         projectLink: "https://starflix-lyart.vercel.app/",
         codeLink: "https://github.com/ZainAsif767/Starflix",
         title: "StarFlix",
-        description: "A simple movie landing page on React FE and Elixir BE using Phoenix Framework.",
+        description: "A movie landing page on Reac and Elixir using Phoenix Framework.",
         tags: ['Elixir/Phoenix', 'React']
     },
     {
@@ -140,12 +148,30 @@ export const data = [
         tags: ['React']
     },
     {
+        name: "NotesApp",
+        imgUrl: images.notesapp,
+        projectLink: "https://markdown-notes-app1.netlify.app/",
+        codeLink: "https://github.com/ZainAsif767/notesapp",
+        title: "Notes MarkDown App",
+        description: "A markdown notes app with some added functionality",
+        tags: ['React']
+    },
+    {
         name: "Carousel & Card",
         imgUrl: images.carousel,
         projectLink: "https://carousels-slider.vercel.app/",
         codeLink: "https://github.com/ZainAsif767/Carousel",
         title: "Carousel & Card",
         description: "Carousel slider and a product card design on react",
+        tags: ['React']
+    },
+    {
+        name: "Meme-Generator",
+        imgUrl: images.meme,
+        projectLink: "https://memegenonreact.netlify.app/",
+        codeLink: "https://github.com/ZainAsif767/Meme-Generator",
+        title: "Meme-Generator",
+        description: "Meme-generator made with some concepts of API calling and hooks",
         tags: ['React']
     },
     {
@@ -166,12 +192,56 @@ export const data = [
         tags: ['React']
     },
     {
+        name: "Memory Game",
+        imgUrl: images.memory,
+        projectLink: "https://memory-game-99.netlify.app/",
+        codeLink: "https://github.com/ZainAsif767/Memory-Game",
+        title: "Memory Game",
+        description: "Simple Game made using Vanilla JS",
+        tags: ['HTML/CSS']
+    },
+    {
         name: "NestJS API",
         imgUrl: images.nestjs,
         codeLink: "https://github.com/ZainAsif767/nestjs-api",
         title: "NestJS API Backend",
         description: "A practice repo for Backend using NestJS Framework and Prisma & Docker",
         tags: ['NestJS']
+    },
+    {
+        name: "NFT-Preview",
+        imgUrl: images.nftpreview,
+        projectLink: "https://nft-challenge-by-zain.netlify.app/",
+        codeLink: "https://github.com/ZainAsif767/NFT-Preview",
+        title: "NFT-Preview",
+        description: "NFT challenge by Frontend mentor, done by using HTML and CSS",
+        tags: ['React']
+    },
+    {
+        name: "YT-Video-Downloader",
+        imgUrl: images.python1,
+        codeLink: "https://github.com/ZainAsif767/NFT-Preview",
+        title: "YT-Video-Downloader",
+        description: "Download Audio from by running the code and simply pasting the url",
+        tags: ['University']
+    },
+    {
+        name: "3D color cube",
+        imgUrl: images.cube,
+        projectLink: "https://3d-color-cube.netlify.app/",
+        codeLink: "https://github.com/ZainAsif767/3D-Cube",
+        title: "3D color cube",
+        description: "3D animated cube made using HTML and CSS3",
+        tags: ['HTML/CSS']
+    },
+    {
+        name: "Notifications Page",
+        imgUrl: images.notifications,
+        projectLink: "https://notifications-page-by-zainasif.netlify.app/",
+        codeLink: "https://github.com/ZainAsif767/notifications-page",
+        title: "Notifications Page",
+        description: "Notifications made using HTML5 & CSS3, Flexbox",
+        tags: ['HTML/CSS']
     },
     {
         name: "Digital Business Card",
@@ -181,6 +251,14 @@ export const data = [
         title: "Digital Business Card",
         description: "A digital business card made in React for showcasing personal info",
         tags: ['React']
+    },
+    {
+        name: "Hotel Management System",
+        imgUrl: images.cpp,
+        codeLink: "https://github.com/ZainAsif767/Hotel-Management-System",
+        title: "Hotel Management System",
+        description: "A simple Hotel management system using CPP and Data Structure",
+        tags: ['University']
     },
 
 ]
