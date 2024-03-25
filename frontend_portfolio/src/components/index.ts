@@ -1,6 +1,6 @@
-import NavigationDots from './NavigationDots';
-import SocialMedia from './SocialMedia';
-import Navbar from './Navbar/Navbar';
+import NavigationDots from './NavigationDots.js';
+import SocialMedia from './SocialMedia.js';
+import Navbar from './Navbar/Navbar.jsx'
 
 export {
     NavigationDots,
